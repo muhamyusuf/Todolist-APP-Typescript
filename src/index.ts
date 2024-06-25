@@ -29,21 +29,25 @@ const renderTasks = () => {
     li.classList.add("task");
     li.textContent = task.text;
     if (task.completed) li.classList.add("completed");
+    li.classList.add("w-full", "rounded", "flex", "items-center", "mb-2", "px-4", "py-2", "border", "border-gray-300", "bg-gray-100", "mx-auto", "text-lg", "justify-between");
 
     const statusContainer = document.createElement("div");
-    statusContainer.classList.add("status-container");
+    statusContainer.classList.add("status-container", "flex", "items-center");
 
     const completedBtn = document.createElement("button");
     completedBtn.textContent = task.completed ? "Ulangi" : "Selesai";
     completedBtn.addEventListener("click", () => toggleCompleted(index));
+    completedBtn.classList.add("bg-black", "text-white", "font-bold", "py-2", "px-4", "rounded", "focus:outline-none", "focus:shadow-outline");
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Hapus";
     deleteBtn.addEventListener("click", () => deleteTask(index));
+    deleteBtn.classList.add("bg-black", "text-white", "font-bold", "py-2", "px-4", "rounded", "focus:outline-none", "focus:shadow-outline");
 
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
     editBtn.addEventListener("click", () => editTask(index));
+    editBtn.classList.add("bg-black", "text-white", "font-bold", "py-2", "px-4", "rounded", "focus:outline-none", "focus:shadow-outline");
 
     statusContainer.appendChild(completedBtn);
     statusContainer.appendChild(deleteBtn);

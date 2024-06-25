@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": { 
-    "start": "tsc --watch"
+  "scripts": {
+    "start": "tsc --watch",
+    "tailwind-build" : "npx tailwindcss -i ./src/input.css -o style.css --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.14.8",
+    "tailwindcss": "^3.4.4",
     "typescript": "^5.5.2"
   }
 }
